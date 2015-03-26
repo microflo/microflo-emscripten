@@ -1,0 +1,19 @@
+{
+  "name": "microflo-emscripten",
+  "description": "Emscripten build of MicroFlo runtime",
+  "author": "Jon Nordby <jononor@gmail.com>",
+  "repo": "microflo/microflo-emscripten",
+  "version": "0.3.23",
+  "dependencies": {
+  },
+  "main": "microflo-emscripten-runtime.js",
+  "scripts": [
+    "microflo-emscripten-runtime.js"
+  ],
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "styles": [],
+  "files": [
+  ]
+}
