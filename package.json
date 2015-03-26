@@ -1,0 +1,24 @@
+{
+  "name": "microflo-emscripten",
+  "version": "0.3.23",
+  "description": "Emscripten build of MicroFlo runtime",
+  "author": "Jon Nordby <jononor@gmail.com> (http://www.jonnor.com)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/microflo/microflo-emscripten.git"
+  },
+  "bugs": "http://github.com/microflo/microflo/issues",
+  "homepage": "http://microflo.org",
+  "license": "MIT",
+  "main": "microflo-emscripten-runtime.js",
+  "files": [
+    "microflo-emscripten-runtime.js"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
