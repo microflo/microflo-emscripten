@@ -1,3 +1,10 @@
+
+var Module = {};
+var isCommonJs = typeof module !== 'undefined' && typeof module.exports !== 'undefined';
+if (isCommonJs) {
+  module.exports = Module;
+}
+
 // The Module object: Our interface to the outside world. We import
 // and export values on it, and do the work to get that through
 // closure compiler if necessary. There are various ways Module can be used:
@@ -13977,6 +13984,23 @@ function __ZN15BreakBeforeMake7processE6Packeta($this,$in,$port) {
  $7 = (($6) + 24|0);
  $8 = HEAP32[$7>>2]|0;
  switch ($8|0) {
+ case 2:  {
+  $25 = $1;
+  $26 = $25 << 24 >> 24;
+  $27 = ($26|0)==(1);
+  if ($27) {
+   $28 = (__ZNK6Packet6asBoolEv($in)|0);
+   if (!($28)) {
+    __ZN6PacketC2Eb($4,1);
+    ;HEAP32[$$byval_copy2+0>>2]=HEAP32[$4+0>>2]|0;HEAP32[$$byval_copy2+4>>2]=HEAP32[$4+4>>2]|0;
+    __ZN9Component4sendE6Packeta($6,$$byval_copy2,1);
+    $29 = (($6) + 24|0);
+    HEAP32[$29>>2] = 3;
+   }
+  }
+  STACKTOP = sp;return;
+  break;
+ }
  case 5:  {
   $35 = $1;
   $36 = $35 << 24 >> 24;
@@ -13993,23 +14017,6 @@ function __ZN15BreakBeforeMake7processE6Packeta($this,$in,$port) {
   }
   break;
  }
- case 6:  {
-  $20 = $1;
-  $21 = $20 << 24 >> 24;
-  $22 = ($21|0)==(0);
-  if ($22) {
-   $23 = (__ZNK6Packet6asBoolEv($in)|0);
-   if ($23) {
-    __ZN6PacketC2Eb($3,0);
-    ;HEAP32[$$byval_copy1+0>>2]=HEAP32[$3+0>>2]|0;HEAP32[$$byval_copy1+4>>2]=HEAP32[$3+4>>2]|0;
-    __ZN9Component4sendE6Packeta($6,$$byval_copy1,0);
-    $24 = (($6) + 24|0);
-    HEAP32[$24>>2] = 2;
-   }
-  }
-  STACKTOP = sp;return;
-  break;
- }
  case 3:  {
   $30 = $1;
   $31 = $30 << 24 >> 24;
@@ -14024,18 +14031,18 @@ function __ZN15BreakBeforeMake7processE6Packeta($this,$in,$port) {
   STACKTOP = sp;return;
   break;
  }
- case 2:  {
-  $25 = $1;
-  $26 = $25 << 24 >> 24;
-  $27 = ($26|0)==(1);
-  if ($27) {
-   $28 = (__ZNK6Packet6asBoolEv($in)|0);
-   if (!($28)) {
-    __ZN6PacketC2Eb($4,1);
-    ;HEAP32[$$byval_copy2+0>>2]=HEAP32[$4+0>>2]|0;HEAP32[$$byval_copy2+4>>2]=HEAP32[$4+4>>2]|0;
-    __ZN9Component4sendE6Packeta($6,$$byval_copy2,1);
-    $29 = (($6) + 24|0);
-    HEAP32[$29>>2] = 3;
+ case 6:  {
+  $20 = $1;
+  $21 = $20 << 24 >> 24;
+  $22 = ($21|0)==(0);
+  if ($22) {
+   $23 = (__ZNK6Packet6asBoolEv($in)|0);
+   if ($23) {
+    __ZN6PacketC2Eb($3,0);
+    ;HEAP32[$$byval_copy1+0>>2]=HEAP32[$3+0>>2]|0;HEAP32[$$byval_copy1+4>>2]=HEAP32[$3+4>>2]|0;
+    __ZN9Component4sendE6Packeta($6,$$byval_copy1,0);
+    $24 = (($6) + 24|0);
+    HEAP32[$24>>2] = 2;
    }
   }
   STACKTOP = sp;return;
