@@ -3,11 +3,11 @@
   "description": "Emscripten build of MicroFlo runtime",
   "author": "Jon Nordby <jononor@gmail.com>",
   "repo": "microflo/microflo-emscripten",
-  "version": "0.3.25",
+  "version": "0.3.26",
   "dependencies": {
   },
   "scripts": [
-    "microflo-emscripten-runtime.js"
+    "microflo-runtime.js"
     "index.js"
   ],
   "remotes": [
@@ -15,6 +15,6 @@
   ],
   "styles": [],
   "json": [
-    "library.json"
+    "componentlib-map.json"
   ]
 }
