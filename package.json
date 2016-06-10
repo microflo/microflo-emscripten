@@ -15,8 +15,8 @@
     "index.js",
     "componentlib-map.json"
   ],
-  "engines": {
-    "node": ">=0.10.0"
+  "scripts": {
+    "test": "make check"
   },
   "dependencies": {},
   "devDependencies": {
