@@ -7,7 +7,7 @@
   "dependencies": {
   },
   "scripts": [
-    "microflo-runtime.js",
+    "dist/microflo-runtime.js",
     "index.js"
   ],
   "remotes": [
@@ -15,6 +15,6 @@
   ],
   "styles": [],
   "json": [
-    "componentlib-map.json"
+    "dist/componentlib-map.json"
   ]
 }
