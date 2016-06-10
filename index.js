@@ -1,5 +1,5 @@
 
 module.exports = {
-  runtime: require('./microflo-runtime.js'),
-  library: require('./componentlib-map.json')
+  runtime: require('./dist/microflo-runtime.js'),
+  library: require('./dist/componentlib-map.json')
 }
