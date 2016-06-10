@@ -10,11 +10,6 @@
   "bugs": "http://github.com/microflo/microflo/issues",
   "homepage": "http://microflo.org",
   "license": "MIT",
-  "files": [
-    "microflo-runtime.js",
-    "index.js",
-    "componentlib-map.json"
-  ],
   "scripts": {
     "test": "make check"
   },
