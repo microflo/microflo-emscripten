@@ -5,7 +5,7 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install -qq -y emscripten
+- sudo apt-get install -qq -y clang-3.2 emscripten
 before_script:
 - emcc
 deploy:
