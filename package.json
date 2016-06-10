@@ -7,7 +7,7 @@
     "type": "git",
     "url": "http://github.com/microflo/microflo-emscripten.git"
   },
-  "bugs": "http://github.com/microflo/microflo/issues",
+  "bugs": "http://github.com/microflo/microflo-emscripten/issues",
   "homepage": "http://microflo.org",
   "license": "MIT",
   "scripts": {
