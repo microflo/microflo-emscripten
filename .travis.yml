@@ -11,4 +11,12 @@ before_install:
 before_script:
 - export PATH=`pwd`/emscripten/:$PATH
 - export EMCC_FAST_COMPILER=0
-- emcc # first-run
+- emcc
+deploy:
+  provider: npm
+  email: jononor@gmail.com
+  api_key:
+    secure: NNkGJ4uPqxNKAw1MLbhR7kFZMOxvuEIvHTGgqMW1Zt/3j+uQSrKBWiJ8o0o5OX5AW6uMRVCGkT2k1f8RpolwO2J2E1NaGHAmUCDao2BifV9f8L/D60OMGU/XudRVxdrw2rw42yUiCi12vNIpY10UUXY5zqRe59iAUFD97OXU7Vc=
+  on:
+    tags: true
+    repo: microflo/microflo-emscripten
