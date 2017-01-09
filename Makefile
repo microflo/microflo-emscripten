@@ -4,6 +4,11 @@ MICROFLO_SOURCE_DIR=$(shell echo `pwd`/node_modules/microflo/microflo)
 BUILD_DIR=./dist
 MICROFLO=./node_modules/.bin/microflo
 GRAPH=./examples/blink.fbp
+TARGET=microflo-runtime.js
+
+ifdef LIBRARY
+LIBRARYOPTION=--library $(LIBRARY)
+endif
 
 EMSCRIPTEN_EXPORTS='["_emscripten_runtime_new", "_emscripten_runtime_free", "_emscripten_runtime_run", "_emscripten_runtime_send", "_emscripten_runtime_setup"]'
 
@@ -15,7 +20,7 @@ build-emscripten:
 	mkdir -p $(BUILD_DIR)
 	$(MICROFLO) generate $(GRAPH) $(BUILD_DIR) --target emscripten ${LIBRARYOPTION}
 	cd $(BUILD_DIR) && echo '#include "emscripten.hpp"' >> main.cpp # HAAACK
-	cd $(BUILD_DIR) && emcc -o microflo-runtime.html --pre-js ${PROJECT_DIR}/src/emscripten-pre.js main.cpp $(COMMON_CFLAGS) ${EMSCRIPTEN_CFLAGS}
+	cd $(BUILD_DIR) && emcc -o $(TARGET) --pre-js ${PROJECT_DIR}/src/emscripten-pre.js main.cpp $(COMMON_CFLAGS) ${EMSCRIPTEN_CFLAGS}
 
 release-emscripten: build-emscripten
     # TODO: package?
