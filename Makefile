@@ -25,6 +25,7 @@ build-emscripten:
 	$(MICROFLO) generate $(GRAPH) $(BUILD_DIR) --target emscripten ${LIBRARYOPTION}
 	cd $(BUILD_DIR) && echo '#include "emscripten.hpp"' >> main.cpp # HAAACK
 	cd $(BUILD_DIR) && emcc -o $(TARGET) --pre-js ${PROJECT_DIR}/src/emscripten-pre.js main.cpp $(COMMON_CFLAGS) ${EMSCRIPTEN_CFLAGS}
+	test -e $(BUILD_DIR)/$(TARGET)
 
 release-emscripten: build-emscripten
     # TODO: package?
