@@ -14,6 +14,7 @@ before_script:
 - emcc
 deploy:
   provider: npm
+  skip_cleanup: true
   email: jononor@gmail.com
   api_key:
     secure: hfh6iQJGxbxjWx1ySF6XsRfkXsvlusS8rf5JD3YZRlTQp/PSMpXmVqMwwjkgE53sn9TagXyeDcfbKoqQLNU1P1lwC4TM6dD6OeoSlWByWIiZwjoIJHcqkfWdCM01fMWgjxMNGNkfF/3cyBoRHzBuvH3pNlIWBNvB2aC0bM8C3dM=
