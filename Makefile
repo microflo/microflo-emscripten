@@ -6,6 +6,10 @@ MICROFLO=./node_modules/.bin/microflo
 GRAPH=./examples/blink.fbp
 TARGET=microflo-runtime.js
 
+ifndef LIBRARY
+LIBRARY=$(shell echo `pwd`/node_modules/microflo-core/components/emscripten-library.json)
+endif
+
 ifdef LIBRARY
 LIBRARYOPTION=--library $(LIBRARY)
 endif
@@ -25,6 +29,9 @@ build-emscripten:
 release-emscripten: build-emscripten
     # TODO: package?
 
-release: release-emscripten
+hack:
+	cp library.json `pwd`/node_modules/microflo-core/components/emscripten-library.json
+
+release: hack release-emscripten
 
 check: release
