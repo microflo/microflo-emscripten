@@ -16,7 +16,7 @@ deploy:
   provider: npm
   email: jononor@gmail.com
   api_key:
-    secure: NNkGJ4uPqxNKAw1MLbhR7kFZMOxvuEIvHTGgqMW1Zt/3j+uQSrKBWiJ8o0o5OX5AW6uMRVCGkT2k1f8RpolwO2J2E1NaGHAmUCDao2BifV9f8L/D60OMGU/XudRVxdrw2rw42yUiCi12vNIpY10UUXY5zqRe59iAUFD97OXU7Vc=
+    secure: hfh6iQJGxbxjWx1ySF6XsRfkXsvlusS8rf5JD3YZRlTQp/PSMpXmVqMwwjkgE53sn9TagXyeDcfbKoqQLNU1P1lwC4TM6dD6OeoSlWByWIiZwjoIJHcqkfWdCM01fMWgjxMNGNkfF/3cyBoRHzBuvH3pNlIWBNvB2aC0bM8C3dM=
   on:
     tags: true
     repo: microflo/microflo-emscripten
