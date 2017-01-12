@@ -6,7 +6,7 @@ function replaceCheck(code) {
     const regex = /(var ENVIRONMENT_IS_NODE =) (typeof process.*)/g;
     const proper = "(typeof window !== 'object' && typeof process === 'object' && typeof require === 'function');"
     
-    return code.replace(regex, function(prefix, check) {
+    return code.replace(regex, function(all, prefix, check) {
         return prefix + proper;
     });
 }
