@@ -26,6 +26,7 @@ build-emscripten:
 	cd $(BUILD_DIR) && echo '#include "emscripten.hpp"' >> main.cpp # HAAACK
 	cd $(BUILD_DIR) && emcc -o $(TARGET) --pre-js ${PROJECT_DIR}/src/emscripten-pre.js main.cpp $(COMMON_CFLAGS) ${EMSCRIPTEN_CFLAGS}
 	test -e $(BUILD_DIR)/$(TARGET)
+	node fix-nodejs-check.js dist/microflo-runtime.js
 
 release-emscripten: build-emscripten
     # TODO: package?
