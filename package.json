@@ -1,6 +1,6 @@
 {
   "name": "microflo-emscripten",
-  "version": "0.3.41",
+  "version": "0.3.42",
   "description": "Emscripten build of MicroFlo runtime",
   "author": "Jon Nordby <jononor@gmail.com> (http://www.jonnor.com)",
   "repository": {
