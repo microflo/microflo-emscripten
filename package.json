@@ -17,7 +17,7 @@
     "ws": "^1.1.1"
   },
   "devDependencies": {
-    "microflo": "^0.3.36",
+    "microflo": "^0.3.44",
     "microflo-core": "^0.3.34"
   }
 }
