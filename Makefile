@@ -37,3 +37,4 @@ hack:
 release: hack release-emscripten
 
 check: release
+	./node_modules/.bin/mocha --compilers=.coffee:coffee-script/register test/*.coffee
