@@ -54,7 +54,7 @@ describeIfSimulator 'Network', ->
       return
     return
   describe 'Uploading a graph via commandstream', ->
-    it 'gives one response per command', (finish) ->
+    it.skip 'gives one response per command', (finish) ->
       s = new microflo.simulator.RuntimeSimulator build
       s.library.addComponent 'Forward', {}, 'Forward.hpp'
       graph = fbp.parse('a(Forward) OUT -> IN b(Forward) OUT -> IN c(Forward)')
@@ -77,6 +77,7 @@ describeIfSimulator 'Network', ->
       s.device.on 'response', handleFunc
       s.device.on 'error', (err) -> return finish err
       s.device.open ->
+        graph.properties = { name: 'emscripten-test' }
         s.uploadGraph graph, ->
           s.device.close ->
             return
