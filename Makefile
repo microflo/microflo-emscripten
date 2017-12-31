@@ -22,8 +22,7 @@ EMSCRIPTEN_CFLAGS:=-DMICROFLO_MESSAGE_LIMIT=200 -s NO_DYNAMIC_EXECUTION=1 -s EXP
 build-emscripten:
 	rm -rf $(BUILD_DIR)
 	mkdir -p $(BUILD_DIR)
-	$(MICROFLO) generate $(GRAPH) $(BUILD_DIR)/main.cpp --target emscripten ${LIBRARYOPTION}
-	cd $(BUILD_DIR) && echo '#include "emscripten.hpp"' >> main.cpp # HAAACK
+	$(MICROFLO) generate $(GRAPH) $(BUILD_DIR)/main.cpp --target emscripten --mainfile `pwd`/src/emscripten_main.hpp ${LIBRARYOPTION}
 	cd $(BUILD_DIR) && emcc -o $(TARGET) --pre-js ${PROJECT_DIR}/src/emscripten-pre.js main.cpp $(COMMON_CFLAGS) ${EMSCRIPTEN_CFLAGS}
 	test -e $(BUILD_DIR)/$(TARGET)
 	node fix-nodejs-check.js dist/microflo-runtime.js
